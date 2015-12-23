@@ -1,0 +1,50 @@
+MAPPING TO SOLVE A GAME
+
+Let's map an actual game. Forbidden Castle, by Mercer Mayer. It's not too big a game, but it has enough pitfalls that you can see how to map things. It also doesn't have official room titles, so the automapper doesn't quite work. The map-through contains some spoilers, so be warned.
+
+I like to set the initial room name as ?, so you know if you haven't explored somewhere.
+
+The first thing you want to do in the game proper is to look for exits. In this case, they exist to the north and east. You may not be sure of the room name, either. But you can just call it "Room 1." So push R, then hit enter and type Room 1. Also, you may note there is a leather bag, so hit tab a few times until you're in the Objects text and then type Leather Bag.
+
+You don't want to leave the exits for later, so you may want to try north (which is blocked) and east. Let's deal with the north exit first.
+
+T toggles whether a line is dotted, which is often the sign for needing something to do to go that way. So let's push T, ctrl-up, and ctrl-down. Ctrl-(arrows) is the easiest way to create a new room from a room that's there. Nothing seems to need to be spaced out, so let's not worry about that. Leave the new room's name as ?. Also, push P to clear line formatting. If you forget to, you can always click on a line and click P.
+
+Note that you can also use a technique I call spidering. That is where you try all the exits from a room and come back to where you were. You don't actually label a room until you've tested all the exits. This can help you develop a basic map quickly, though it may be short on room detail and puzzle-solving. We'll discuss spidering later.
+
+Go east in the game. You may notice if you go west and east, the room names are revealed when you return. In this case, it's the Enchanted Forest in the west and the Valley in the east.
+
+Ctrl-down, ctrl-right and type in the name of the Valley, then north and south in the game reveals the Forbidden Hills above that. Now there's a passage down. How to deal with that?
+
+By pushing D. Down-passages are tricky as you're never sure which direction is best to simulate it. Here east is as good a guess as any. So push D, ctrl-right and then type in the room name after you went up and down. If you pushed U by mistake, you can reverse the line by clicking V or D while highlighting it.
+
+Let's pretend we can't find the way across the river. Then we can create another dotted line, T, ctrl-right, P.
+
+===========image 1
+
+Now what do we do about the dotted lines? If you go back to the forest and try going north, the fairy says you need a locket. It would be nice to have a way to mention this succinctly on the map. And fortunately we do! Click the line, then click P for properties. The Start, Middle and End text fields can be edited. If we type Middle as Need Locket, then we see a pretty decent clue that you need the locket to go north.
+
+We haven't found any locket, so let's go back to the West Bank. You may or may not have noticed the boat appearing. You can GET BOAT to make it across to the River Path. And again, you can mark the line with GET BOAT as you did for the locket. In fact, you didn't really have to solve a puzzle to get there, just wait a turn. So you can click on that line, hit P, then hit enter to bring up the dialogue box. Alt-M and type GET BOAT and now you will remember how to get across.
+
+I'm going to skip over the details of the next bits and assume you can just poke for exits and write out who is where. Forbidden Castle has some random elements, but I'm going to write where I first found things.
+
+(Protip: save at the West Way to duplicate what happens next.)
+
+One thing we find, though, is that if we go north from the West Way, we enter a location called the Swamp. There's no way out, or there doesn't seem to be! Let's note this. We can either do so by pushing A, then ctrl-up from West Way, or by clicking the connector between the two after and clicking A.
+
+But that may not be enough to ward someone off from going that direction! It might be best to add, as well, something more prominent.
+
+So let's create our first region. Tools, map settings, regions, add regions. Change region 1. Tab to the name and call it DEATH. Tab to the color, then click red, then click OK. Now right-click on swamp, set region, and choose DEATH. Bingo! A warning!
+
+=============image 2
+
+In fact, extending that, you may notice other cheap deaths if you try to go certain ways twice. Let's put them in a region labeled WARNING, which is pink.
+
+We also have another problem. The bridge appears to be west of the West Way, but that clashes with the garden path. So highlight the rectangle containing the west way, swamp and crossroads. Move it up four squares. Now you still have an accurate map. Moving a bunch of rooms at once is a big help in case your first guess for a map was wrong. You may have to change ports, too. But that is not bad. Just click on a connector and then on either of its ends.
+
+A third problem is we don't seem to have space for the text for "CROSS BRIDGE" from West Way to Castle Entrance. But if we write "Start" as "Cross" and "End" as "Bridge" we'll be okay. You may need to push V.
+
+Let's map the upper castle now. We may run into another problem, where there are passages north and south of the upper hall, but we have no room north. So again highlight it and the top floor and move them left. You may find the upper hall and top hall
+
+
+=======================================================

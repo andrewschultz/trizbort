@@ -1,0 +1,119 @@
+<!--
+    Copyright (c) 2010-2015 by Genstein and Jason Lautzenheiser
+
+    This file is (or was originally) part of Trizbort, the Interactive Fiction Mapper.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+<!--#include virtual="../header1.inc" -->
+<!--#include virtual="../css.inc" -->
+<!--#include virtual="../header2.inc" -->
+
+<!--
+    the include files above may change, and with it the header below and so forth. But until trizbort.com takes shape, they will be left for posterity.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Regions documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="help" class="table_without_columns">
+One feature Trizbort allows is to lump rooms into groups called regions. The terminology and concept come from <a href="http://www.inform7.com">Inform 7</a>, where code looks as follows:
+
+<p><code>The shoreline is a region.
+<br />The cave is a room in shoreline.
+<br />The cliff is a room in shoreline.</code>
+
+<p>Trizbort assigns every room a region, although for new files, the only region is the default "NoRegion." Unlike in Inform 7, a room may only belong to one region. Currently regions provide for default formatting of text and background colors. Regions need not have any rooms assigned to them.
+
+<p>Regions are in no way critical to creating a Trizbort map. However, they are very handy for bigger-picture organization, whether of a game you've played or one you're planning.
+
+<a name="modifying_regions">
+<h2>On Modifying Regions</h2>
+
+While the Tools::Map Settings box has an "OK" and "Cancel" button, the sub-dialogs Trizbort uses for regions work around them. We don't have enough programmers to change this at the moment, so you need to be careful. Adding, deleting or changing a region with Trizbort is not reversible, though if that region was in a previous version of your file, you can probably open your file in a text editor, copy the XML to the clipboard, and over to your new file in a text editor. Still, be warned that the big dialog's OK and Cancel button do not affect regions much, if at all.
+
+<p>Trizbort tries to keep all regions alphabetized in the region listbox.
+
+<a name="adding_a_region">
+<h2>Adding a Region</h2>
+
+<p>The Tools::Map Settings sub-menu contains the Regions tab. There you will see only NoRegion for starters. It is highlighted, but "delete region" is greyed out. The "change" button is available, because you are allowed to change the default background and text color of NoRegion, but not its name.</p>
+
+<img src = "regions_blank.png">
+
+<p>To add a region, simply click the "Add Change" button, or alt-a. The new region is highlighted. Note that Trizbort avoids conflicts by calling the region RegionX, where X is the lowest integer not used. Trizbort can add as many regions as memory will allow. A region itself does not take up much XML in the Trizbort file. It is in many ways less complex than a room.
+
+<a name="deleting_a_region">
+<h2>Deleting a Region</h2>
+
+<p>In the list box, you may highlight a region and click DELETE or the "Delete Region" button.
+
+<p>WARNING: as stated above, there is no way to undo this!
+
+<p>WARNING: if you delete a region, all rooms in the region are sent back to NoRegion. You may wish to look at Tools::Map Statistics first.
+
+<p>While you can't highlight multiple regions, you can delete the next highlighted region. This may be slightly inconvenient for very big projects where you have needed to make drastic changes, but hopefully this case doesn't appear too often.
+
+<a name="changing_a_region">
+<h2>Changing an Existing Region</h2>
+
+<p>If you click CHANGE in the regions tab, you will see that you can modify the name (for non-default,) default background color and text color. Note that any room in the region can still override these.
+
+<p><img src = "region_settings.png">
+
+<a name="region_names">
+<h3>Region Names</h3>
+
+Each region must have a unique name. Region names are case-insensitive. Almost any character is allowed, although if your region name is too long to fit in the listbox, Trizbort currently will display a blank line instead of the name.
+
+<a name="region_color">
+<h3>Region Color</h3>
+
+This is the default background color for a room in a region. It is also the color that will be shown in the context menu when you select a region. The standard Windows color choosing dialog pops up if you push the Region Color button. You can choose a custom RGB or pick from standard colors.
+
+<a name="text_color">
+<h3>Text Color</h3>
+
+<p>This is the default color for room names. It also overrides the document's default object and line color, if you have placed object descriptions inside the room or are using a subtitle. The standard Windows color choosing dialog pops up if you push the Region Color button. You can choose a custom RGB or pick from standard colors. No check is made for readability.
+
+<a name="room_region_changing">
+<h2>Changing rooms among regions</h2>
+
+<a name="single_room_region_change">
+<h3>Single room</h3>
+
+You can change a room's region by hitting ENTER to get to its properties, then opening the Regions tab and changing it there, or by "Change Region" in the rooms pull-down.
+
+<a name="multiple_room_region_change">
+<h3>Multiple Rooms</h3>
+
+<p>You can also change multiple rooms' regions by right-clicking on a multiple selection and hovering over "Set Region." The sub-menu will have all the regions to choose from. The color square for the region of the room you right-clicked on will have a black outline to indicate that is the current region. You may change rooms from different regions all at once, though they will all go to the new region you define.</p>
+
+<img src="region_context_menu.png">
+
+</div>
+</body>
+</html>
+
+<!--#include virtual="../footer.inc" -->

@@ -1,0 +1,100 @@
+<!--
+    Copyright (c) 2010-2015 by Genstein and Jason Lautzenheiser
+
+    This file is (or was originally) part of Trizbort, the Interactive Fiction Mapper.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+<!--#include virtual="../header1.inc" -->
+<!--#include virtual="../css.inc" -->
+<!--#include virtual="../header2.inc" -->
+
+<!--
+    the include files above may change, and with it the header below and so forth. But until trizbort.com takes shape, they will be left for posterity.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trizbort 1.5.8+ documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="help" class="indent_without_columns">
+
+<a name="menufind"></a>
+<h2>Accelerator Listing</h2>
+
+<table border=1>
+<tr><th>Key</th><th>By itself</th><th><span class="ctrls">control</span>/<span class="shifts">shift</span>/<span class="alts">alt</span> or any combo:<br/><span class="ctrlshifts">control-shifts</span>, <span class="ctrlalts">control-alts</span> and (much rarer) <span class="shiftalts">shift-alts</span>.
+</th>
+<tr><td class="heading">A</td><td>One-way line</td><td><span class="ctrls">control-a</span>=select all, <span class="ctrlshifts">control-shift-a</span>=select region</td></tr>
+<tr><td class="altheading">B</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="heading">C</td><td class="blank"></td><td><span class="ctrls">control-c</span>=copy, <span class="ctrlalts">control-alt-c</span>=copy color</td></tr>
+<tr><td class="altheading">D</td><td>down/up line</td><td class="blank"></td></tr>
+<tr><td class="heading">E</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="altheading">F</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="heading">G</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="altheading">H</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="heading">I</td><td>In/out line</td><td class="blank"></td></tr>
+<tr><td class="altheading">J</td><td>join rooms</td><td class="blank"></td></tr>
+<tr><td class="heading">K</td><td>toggle darkness</td><td class="blank"></td></tr>
+<tr><td class="altheading">L</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="heading">M</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="altheading">N</td><td class="blank"></td><td><span class="ctrls">control-n</span> = new map</td></tr>
+<tr><td class="heading">O</td><td>Out/in line</td><td><span class="ctrls">control-o</span> = open trizbort file</td></tr>
+<tr><td class="altheading">P</td><td>Plain line styling</td><td class="blank"></td></tr>
+<tr><td class="heading">Q</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="altheading">R</td><td>Add a room</td><td class="blank"></td></tr>
+<tr><td class="heading">S</td><td class="blank"></td><td><span class="ctrls">control</span>-S=save, control-alt-S=save as, <span class="ctrlshifts">control-shift-S</span>=smart save</td></tr>
+<tr><td class="altheading">T</td><td>dotted line</td><td><span class="ctrlshifts">control-shift-T</span>=export to TADS 3 file, <span class="ctrlalts">control-alt-T</span>=export TADS 3 source to clipboard</td></tr>
+<tr><td class="heading">U</td><td>up/down line</td><td class="blank"></td></tr>
+<tr><td class="altheading">V</td><td>reverse line</td><td><span class="ctrls">control-v</span>=paste</span></td></tr>
+<tr><td class="heading">W</td><td>Swaps room objects if two are highlighted</td><td class="blank"></td></tr>
+<tr><td class="altheading">X</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="heading">Y</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="altheading">Z</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="heading">0</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="altheading">1</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="heading">2</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="altheading">3</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="heading">4</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="altheading">5</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="heading">6</td><td class="blank"></td><td><span class="ctrlshifts">control-shift-6</span>=export to Inform 6 file, <span class="ctrlalts">control-alt-6</span>=export Inform 6 source to clipboard</td></tr>
+<tr><td class="altheading">7</td><td class="blank"></td><td><span class="ctrlshifts">control-shift-7</span>=export to Inform 7 file, <span class="ctrlalts">control-alt-7</span>=export Inform 7 source to clipboard</td></tr>
+<tr><td class="heading">8</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td class="altheading">9</td><td class="blank"></td><td class="blank"></td></tr>
+<tr><td colspan=3><center>Non-alphanumeric</center></td></tr>
+<tr><td class="heading">Delete</td><td>Delete all selected</td><td class="blank"></td></tr>
+<tr><td class="altheading">Enter</td><td>Edit selected room properties<br />Select center room</td><td class="blank"></td></tr>
+<tr><td class="heading">ESC</td><td>Select none</td><td class="blank"></td></tr>
+<tr><td class="altheading">F1</td><td class="blank"></td><td><span class="ctrls">control-F1</span>=toggle upper left frame rate info</td></tr>
+<tr><td class="heading">F2</td><td>Rename (seems to duplicate Enter)</td><td><span class="ctrls">control-F2</span>=toggle all elements, <span class="shifts">shift-F2</span>=change region</td></tr>
+<tr><td class="altheading">F3</td><td class="blank"></td><td><span class="ctrls">control-F3</span>=toggle all room borders and connectors</td></tr>
+<tr><td class="heading">F4</td><td class="blank"></td><td><span class="ctrls">control-F4</span>=toggle all text</td></tr>
+<tr><td class="altheading">F5</td><td>Disable stops in automap</td><td class="blank"></td></tr>
+<tr><td class="heading">F11</td><td>Single step in automap</td><td class="blank"></td></tr>
+<tr><td class="altheading">+/=</td><td>zoom in</td><td class="blank"></td></tr>
+<tr><td class="heading">-</td><td>zoom out</td><td class="blank"></td></tr>
+<tr><td class="altheading">(arrow keys)</td><td>moves around the map</td><td><span class="ctrls">control-arrow</span>=move to or create new room</td></tr>
+<tr><td class="heading">(home)</td><td>Centers the map</td><td><span class="ctrls">control-home</span>=centers the map, see it all</td></tr>
+<tr><td class="altheading">(numpad keys)</td><td>moves around the map</td><td><span class="ctrls">control-numpad</span>=move to or create new room</td></tr>
+</table>
+

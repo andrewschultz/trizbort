@@ -1,0 +1,89 @@
+<!--
+    Copyright (c) 2010-2015 by Genstein and Jason Lautzenheiser
+
+    This file is (or was originally) part of Trizbort, the Interactive Fiction Mapper.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+<!--#include virtual="../header1.inc" -->
+<!--#include virtual="../css.inc" -->
+<!--#include virtual="../header2.inc" -->
+
+<!--
+    the include files above may change, and with it the header below and so forth. But until trizbort.com takes shape, they will be left for posterity.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quick Start Documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<!--#include virtual="toc.html" -->
+
+While Trizbort has a lot of features, there are a few that can get you started making a basic map very quickly. This page will list an overview. Trizbort allows the user to edit via mouse, accelerators, or the menus.
+ 
+<a name="quickstrokes"></a>
+<h2>Quick Keystrokes to Know</h2>
+
+<p>To place a room on the map, push R. You will be allowed to name the room and its contents. You can tab through the various fields. ENTER will save the information, unless you are in the Description box.</p>
+
+<p>To place another room connected to it, push <span class="accel">control-(arrow)</span>. Either up, down, left or right is valid. Or you can use the numpad. If you have number lock enabled, then you can push <span class="ctrl">control-(number)</span>, which allows room connections in the four main directions (2, 4, 6, 8) as well as the four diagonals (1, 3, 5, 7).</p>
+
+<p>This will also work to join two rooms that are adjacent, and you wish to connect them. For instance, if you make a room, then control-up, control-left, control-down and control-right, you'll have a loop of four rooms.</p>
+
+<p>But what if the map is a bit trickier? What if, say, you have something like this, where opposite directions don't quite cancel each other out?</p>
+
+<img src = "quickstart_keystrokes.png">
+
+<p>There are a few solutions. The first is to hover over an un-highlighted room (Room 0) and click on the rightmost dot that appears. Once you've got this port, drag the mouse to the west port of Room 4, and you have connected the two!</p>
+
+<p>Another solution would be, with Room 4 highlighted, to hit the left arrow five times. That makes the connector between rooms 3 and 4 a bit odd for the moment, but you can push ctrl-left to link Room 0 with Room 4, then ctrl-right to move back to Room 4, then the right arrow five times. Voila!</p>
+
+<p>If you knew the map would be like this ahead of time (maybe you had a physical map on paper,) you could have created Room 0, then Room 4, and moved it right. You could do this with the mouse or the right arrow once Room 4 is highlighted. In this case, you would need five squares: two for the default spacing between rooms and three for the room width. This organizes the rooms in memory a bit differently than if you created Room 1, then Room 2, etc., but it doesn't have any practical effect.</p>
+ 
+ <a name="context_menus">
+<h2>Context Menus</h2>
+
+<p>Context menus are there to help the user with what are probably the most useful options, given what is highlighted. Note that this section is not strictly critical, as context menu items also appear in pull-down menus. But it may help you focus on what is most useful to a new user.</p>
+
+<a name="context_menus_general">
+<h3>General Context Menu</h3>
+
+<img src = "context_menu_general.png">
+
+<p>The general context menu doesn't have many options, because you can't manipulate the canvas too much. R creates a room, or you can access the map and application settings, which also can be found in the tools sub-menu. Those will be discussed in detail in <a href="tools.htm#mapsettings">Map Settings</a> and <a href="tools.htm#appsettings">Application Settings</a></p>.
+
+<a name="context_menus_rooms">
+<h3>Room Context Menu</h3>
+
+<img src = "context_menu_room.png">
+
+<p>You've already seen that R creates new rooms, but you can also edit its properties with ENTER. The context menu will always have a few items greyed out, as J (join rooms) and Swap requires that two or more be highlighted. But you can only rename rooms or edit properties one room at a time. However, some options such as Toggle Darkness or Set Region (detailed in <a href="regions.htm">Regions</a>) are quite useful to apply to multiple rooms.</p>
+
+<a name="context_menus_connections">
+<h3>Connections Context Menu</h3>
+
+<img src = "context_menu_connector.png">
+
+<p>The connections context menu contains many items you would see if you pulled down the Connections menu item. The "Add Room" capability is there so that you can place a room between the two rooms the connector joins.
+
+<p>If a connector does not join two rooms, R (add room) will add a room to the loose end. The Line Styles include up/down and in/out labeling, but the ones I find most important to remember are V, to reverse the labeling (for instance, trying to specify one room as above another, but Trizbort reverses them,) and P, to give plain formatting.

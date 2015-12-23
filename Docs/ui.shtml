@@ -1,0 +1,85 @@
+<!--
+    Copyright (c) 2010-2015 by Genstein and Jason Lautzenheiser
+
+    This file is (or was originally) part of Trizbort, the Interactive Fiction Mapper.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+-->
+<!--#include virtual="../header1.inc" -->
+<!--#include virtual="../css.inc" -->
+<!--#include virtual="../header2.inc" -->
+
+<!--
+    the include files above may change, and with it the header below and so forth. But until trizbort.com takes shape, they will be left for posterity.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Interface (UI) Documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<!--#include virtual="toc.html" -->
+
+<a name="the_screen"></a>
+<h2>The Screen</h2>
+
+<p>This is an example of a Trizbort map in progress:</p>
+<p><img src="ui.png" alt="Trizbort's user interface"></p>
+
+<a name="parts_of_the_screen"></a>
+<h2>Parts of the Screen</h2>
+
+<p>Here's the same view, but we've labelled each part with terms the document will use in other sections. Hopefully they are intuitive enough, though you might want to remember them or just check back here if you see a term you're not familiar with.</p>
+<p><img src="ui_labelled.png" alt="Trizbort's user interface, labelled"></p>
+
+<a name="explained"></a>
+<h2>Parts of the Screen, Explained</h2>
+
+<table>
+<tr><td class="heading">Menu Bar</td><td>Most of Trizbort's commands are available both from the menu bar and through keyboard shortcuts (keys you can press to achieve the same effect). Where shortcuts exist, they appear next to the relevant menu item. So if a menu item reads "View&nbsp;Entire&nbsp;Map&nbsp;&nbsp;&nbsp;&nbsp;Control-Home" then you can either select the menu item or hold down the Control key and press the Home key on your keyboard to achieve the same effect.</td></tr>
+<tr><td class="altheading">Toolbar</td><td class="alt">Some of Trizbort's commands also appear here as buttons for quick access.</td></tr>
+<tr><td class="heading">mini-map</td><td>This shows an overview of the entire map, with each mapped room as a box.</td></tr>
+<tr><td class="altheading">Viewport</td><td class="alt">This shows the portion of the entire map you're currently viewing. You can click and/or drag inside the mini-map with the left mouse button to move the viewport.</td></tr>
+<tr><td class="heading">Canvas</td><td>This shows you a "top down" view of the map which you can scroll and zoom in and out. You'll spend most of your time interacting with rooms and connections on the canvas. Trizbort generally assumes that the top of the screen is northerly, the bottom is southerly, the right is easterly and the left is westerly.</td></tr>
+<tr><td class="altheading">Scroll&nbsp;Bars</td><td class="alt">These let you scroll the canvas around, though you can also do the same by clicking and dragging the canvas with the middle mouse button, with the cursor keys, or with the mini-map.</td></tr>
+<tr><td class="heading">Room</td><td>Rooms appear as boxes on the canvas. The name of the room appears in the middle of the box. If the room is dark (so you need a light source in game to see) then the room is marked with a black stripe in the top right corner, as with "Cave" in this picture.</td></tr>
+<tr><td class="altheading">Object List</td><td class="alt">Each room can have an optional list of objects, which you can set to appear next to the room in a chosen direction or even inside the room's box. The object list in this screenshot belongs to the room "Cave".</td></tr>
+<tr><td class="heading">Connection</td><td>Sometimes just called a "line" (no, really), connections show you how you can move from one room to another in game. If you move a room, its connections generally stay connected, automatically. Dotted connections may be used to indicate "conditional" exits: routes between rooms which you have to do something special in game to use, even if it's just unlocking a door.</td></tr>
+<tr><td class="altheading">Connection&nbsp;Label</td><td class="alt">You can assign text labels to the start, middle and/or end of connections, to indicate special directions such as "up" or "in" or to indicate a special action that has to be taken to go that way.</td></tr>
+<tr><td class="heading">Arrow</td><td>You can add arrows to a connection to indicate a one way route between rooms. Arrows point in the direction in which the line was first drawn, though you can easily reverse the direction of connections.</td></tr>
+</table>
+
+<div class="tip">
+<div class="heading">Tip</div>
+<div class="body">
+<p>Most things you can do in Trizbort are accessible from the menu bar or by pressing keys.</p>
+<p>Where this document says something like <span class="quote">choose&nbsp;Edit->Add&nbsp;Room</span> it means to select "Add Room" from the "Edit" menu on the menu bar. Menu bar paths are highlighted like <span class="menufind">this</span> and will usually contain an arrow, so you can see them quickly.</p>
+<p>Where it says <span class="quote">press&nbsp;R</span> it means to press the "R" key on your keyboard; <span class="quote">press&nbsp;Control-Home</span> means to hold down the Control key on your keyboard and press the "Home" key. Keyboard combinations are highlighted like <span class="accel">this</span> so you can see them quickly.</p>
+</div> <!-- tip body -->
+</div> <!-- tip -->
+
+<!--#include virtual="toc.html" -->
+
+</body>
+</html>
+
+<!--#include virtual="../footer.inc" -->
