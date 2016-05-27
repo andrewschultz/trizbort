@@ -103,3 +103,11 @@ echo subtitle positioning and sizing: smaller than title (issue #220)
 %TESTBASE%\long-subtitles.trizbort
 echo subtitle positioning and sizing: larger than title (issue #219)
 %TESTBASE%\long-big-subtitles.trizbort
+echo Ellipse connection labels
+%TESTBASE%\connections-ellipse-labeled.trizbort
+echo Octagon connection labels
+%TESTBASE%\connections-octagon-labeled.trizbort
+echo Rounded Rectangle connection labels
+%TESTBASE%\connections-rounded-labeled.trizbort
+echo Basic object syntax here
+%TESTBASE%\object-basic-syntax.trizbort
