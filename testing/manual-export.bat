@@ -8,3 +8,5 @@ echo Instructions should be contained in a marquee room at the top.
 rem skip warning for reused test file
 echo Manual test case. Export to all formats via the clipboard and view in a text editor. Make sire the accented e's become e's. (issue #234)
 %TESTBASE%\ext-chars-test.trizbort
+echo Basic object syntax to export to the clipboard
+%TESTBASE%\object-basic-syntax.trizbort

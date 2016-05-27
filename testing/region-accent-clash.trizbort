@@ -2,13 +2,18 @@
 <trizbort version="1.5.9.4">
 	<info />
 	<map>
-		<room id="1" name="Accent ague" subtitle="" x="-128" y="-96" w="96" h="64" region="Téléviseur" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="2" name="Accent grave" subtitle="" x="32" y="-96" w="96" h="64" region="Tèlèviseur" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="3">
+		<room id="1" name="Accent ague (red)" subtitle="" x="-128" y="-96" w="96" h="64" region="Téléviseur" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="2" name="Accent grave (yellow)" subtitle="" x="192" y="-96" w="96" h="64" region="Tèlèviseur" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="4" name="This file has two accented regions that may clash. Stress case, but all the same..." subtitle="" x="-128" y="-192" w="416" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="5" name="No Accent (orange)" subtitle="" x="32" y="-96" w="96" h="64" region="Televiseur" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="6">
 			<dock index="0" id="1" port="e" />
+			<dock index="1" id="5" port="w" />
+		</line>
+		<line id="7">
+			<dock index="0" id="5" port="e" />
 			<dock index="1" id="2" port="w" />
 		</line>
-		<room id="4" name="This file has two accented regions that may clash. Stress case, but all the same..." subtitle="" x="-128" y="-192" w="256" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 	</map>
 	<settings>
 		<colors>
@@ -26,8 +31,9 @@
 		</colors>
 		<regions>
 			<NoRegion Name="NoRegion" TextColor="Black">White</NoRegion>
-			<Téléviseur Name="Téléviseur" TextColor="MidnightBlue">White</Téléviseur>
-			<Tèlèviseur Name="Tèlèviseur" TextColor="MidnightBlue">White</Tèlèviseur>
+			<Televiseur Name="Televiseur" TextColor="MidnightBlue">#FF8040</Televiseur>
+			<Téléviseur Name="Téléviseur" TextColor="MidnightBlue">Red</Téléviseur>
+			<Tèlèviseur Name="Tèlèviseur" TextColor="MidnightBlue">Yellow</Tèlèviseur>
 		</regions>
 		<fonts>
 			<room size="13">Arial</room>
