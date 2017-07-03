@@ -183,6 +183,8 @@ namespace Trizbort
         var versionNumber = root.Attribute("version").Text;
         setVersion(versionNumber);
 
+        checkDocVersion();
+
         // load info
         Title = root["info"]["title"].Text;
         Author = root["info"]["author"].Text;
@@ -336,6 +338,44 @@ namespace Trizbort
         return false;
       }
       return false;
+    }
+
+    public void checkDocVersion()
+   {
+        var AppVers = Version.Parse(Application.ProductVersion);
+        var infoList = $"Executable Version = {Application.ProductVersion}{Environment.NewLine}Document Version = {Version.ToString()}{Environment.NewLine}";
+
+        if (Version.Major < AppVers.Major) return;
+        if (Version.Major > AppVers.Major)
+        {
+          MessageBox.Show(Program.MainForm,
+            string.Format($"{infoList}The document is ahead a major version. Information is very likely to be lost."), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+          return;
+        }
+
+        if (Version.Minor < AppVers.Minor) return;
+        if (Version.Minor > AppVers.Minor)
+        {
+          MessageBox.Show(Program.MainForm,
+            string.Format($"{infoList}The document is ahead a minor version. Information is likely to be lost."), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+          return;
+        }
+
+        if (Version.Build < AppVers.Build) return;
+        if (Version.Build > AppVers.Build)
+        {
+            MessageBox.Show(Program.MainForm,
+            string.Format($"{infoList}The document is ahead a build. Information is somewhat likely to be lost."), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+
+        if (Version.MinorRevision < AppVers.MinorRevision) return;
+        if (Version.MinorRevision > AppVers.MinorRevision)
+        {
+            MessageBox.Show(Program.MainForm,
+            string.Format($"{infoList}The document is ahead a minor revision. Information may possibly be lost."), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
     }
   }
 }
