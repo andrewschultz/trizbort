@@ -156,6 +156,44 @@ namespace Trizbort
       }
     }
 
+    public static void searchThrough(Dictionary<Room, bool> traversedYet, Room myrm, bool includeDotted)
+    {
+      if (traversedYet[myrm] == true)
+        return;
+        
+      traversedYet[myrm] = true;
+
+      foreach (var element in myrm.GetConnections())
+      {
+        if (element.Style == ConnectionStyle.Dashed && includeDotted == false)
+          continue;
+
+        if (element.GetTargetRoom() == null || element.GetSourceRoom() == null)
+          return;
+
+        if (element.GetSourceRoom() == myrm)
+        {
+          searchThrough(traversedYet, element.GetTargetRoom(), includeDotted);
+        }
+        else if (element.GetTargetRoom() == myrm && element.Flow != ConnectionFlow.OneWay)
+        {
+          searchThrough(traversedYet, element.GetSourceRoom(), includeDotted);
+        }
+      }
+    }
+
+    public static int roomsConnectedFrom(Room myrm, bool includeDotted)
+    {
+      var traversedYet = new Dictionary<Room, bool>();
+
+      foreach (var rm in Project.Current.Elements.OfType<Room>())
+        traversedYet[rm] = false;
+
+      searchThrough(traversedYet, myrm, includeDotted);
+      var x = traversedYet.Keys.Count(p => traversedYet[p] == true);
+      return x;
+    }
+
     public static int UpDown
     {
         get {

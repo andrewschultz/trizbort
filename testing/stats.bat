@@ -12,3 +12,5 @@ echo Checking dead end start room.
 %TESTBASE%\map-stats-dead-end-start-room.trizbort
 echo Checking dead end only room.
 %TESTBASE%\map-stats-dead-end-only-room.trizbort
+echo Checking number of rooms accessible from start.
+%TESTBASE%\map-stats-count-connected-rooms.trizbort

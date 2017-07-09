@@ -84,7 +84,14 @@ namespace Trizbort.UI
 
       stats += $"{Environment.NewLine}{new String('=', 30)}Odd stuff below here{Environment.NewLine}";
 
-      stats += $"{Environment.NewLine}Room shapes: {MapStatistics.NumberOfRectangularRooms} rectangular, {MapStatistics.NumberOfEllipticalRooms} elliptical, " +
+      if (MapStatistics.NumberOfStartRooms == 1)
+      {
+        var temproom = Project.Current.Elements.OfType<Room>().First(p => p.IsStartRoom);
+        stats += string.Format("{2}Connected to start room {3}: {0} any connections, {1} non-dotted connections.{2}",
+          MapStatistics.roomsConnectedFrom(temproom, true), MapStatistics.roomsConnectedFrom(temproom, false), Environment.NewLine, MapStatistics.StartRoomName);
+      }
+
+            stats += $"{Environment.NewLine}Room shapes: {MapStatistics.NumberOfRectangularRooms} rectangular, {MapStatistics.NumberOfEllipticalRooms} elliptical, " +
         $"{MapStatistics.NumberOfRoundCornerRooms} round cornered, {MapStatistics.NumberOfOctagonalRooms} octagonal.{Environment.NewLine}";
 
       if (MapStatistics.NumberOfRegions > 0)
