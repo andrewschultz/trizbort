@@ -84,11 +84,14 @@ namespace Trizbort.UI
 
       stats += $"{Environment.NewLine}{new String('=', 30)}Odd stuff below here{Environment.NewLine}";
 
+      var connectionsCalculated = false;
+
       if (MapStatistics.NumberOfStartRooms == 1)
       {
         var temproom = Project.Current.Elements.OfType<Room>().First(p => p.IsStartRoom);
-        stats += string.Format("{2}Connected to start room {3}: {0} any connections, {1} non-dotted connections.{2}",
+        stats += string.Format("{2}Connected to start room {3}: {0} any connections, {1} non-dotted connections.",
           MapStatistics.roomsConnectedFrom(temproom, true), MapStatistics.roomsConnectedFrom(temproom, false), Environment.NewLine, MapStatistics.StartRoomName);
+        connectionsCalculated = true;
       }
 
       if (Project.Current.Canvas.SelectedRooms.Count >= 1)
@@ -99,10 +102,14 @@ namespace Trizbort.UI
           if (rm == temproom)
             continue;
 
-          stats += string.Format("{2}Connected to room {3}: {0} any connections, {1} non-dotted connections.{2}",
-          MapStatistics.roomsConnectedFrom(rm, true), MapStatistics.roomsConnectedFrom(rm, false), Environment.NewLine, MapStatistics.rm);
+          stats += string.Format("{2}Connected to room {3}: {0} any connections, {1} non-dotted connections.",
+            MapStatistics.roomsConnectedFrom(rm, true), MapStatistics.roomsConnectedFrom(rm, false), Environment.NewLine, rm.Name);
+          connectionsCalculated = true;
         }
       }
+
+      if (connectionsCalculated)
+        stats += Environment.NewLine;
 
       stats += $"{Environment.NewLine}Room shapes: {MapStatistics.NumberOfRectangularRooms} rectangular, {MapStatistics.NumberOfEllipticalRooms} elliptical, " +
         $"{MapStatistics.NumberOfRoundCornerRooms} round cornered, {MapStatistics.NumberOfOctagonalRooms} octagonal.{Environment.NewLine}";
